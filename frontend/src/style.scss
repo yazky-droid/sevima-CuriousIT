@@ -1,7 +1,7 @@
 $blackDark : #090A10;
 $darkColor : #1c212d;
 $primaryColor : #54545E;
-$blueColor : #0B0CE9;
+$blueColor : #0b0ce9;
 $navyBlue : #131659;
 $lightColor : #EBECF2;
 $lightGray : #A3B7D5;
@@ -432,10 +432,134 @@ $pastelGray : #739AC0;
                     }
                 }
             }
+        }
 
 
+        // ABOUT
+        .about{
+            display: flex;
+            gap: 50px;
+            height: 100vh;
+            
+
+            .left{
+                flex: 5;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                h1{
+                    font-size: 38px;
+                    font-weight: 900;
+                    
+                    position: relative;
+                    color: $lightColor;
+                    &::after{
+                        content: " ";
+                        width: 105px;
+                        height: 30px;
+                        background-color: $blueColor;
+                        opacity: 0.9;
+                        position: absolute;
+                        bottom: 0;
+                        left: 210px;
+                        z-index: -1;
+                    }
+                }
+
+                .desc-about{
+                    font-size: 14px;
+                    font-weight: 700;
+                }
+
+                .accordion{
+                    display: flex;
+                    flex-direction: column;
+                    .accordion-item{
+                        display: flex;
+                        flex-direction: column;
+                        border-bottom: 1px solid $lightGray;
+
+                    }
+
+                    .accordion-title{
+                        display: flex;
+                        justify-content: space-between;
+                        
+                        p{
+                            font-size: 18px;
+                            color: $lightColor;
+                        }
+
+                    }
+                }
+                p{
+                    font-size: 14px;
+                    text-align: justify;
+                }
+
+            }
+
+            .right{
+                flex: 5;
+                width: 100%;
+
+                img{
+                    width: 95%;
+                    position: relative;
+
+                   filter: drop-shadow(0.4rem 0.5rem 0.4rem rgba(11, 12, 233, 0.5));
+                   transition: width 1s, filter 1s;
+                    &:hover{
+                        filter: drop-shadow(0.7rem 1rem 0.4rem rgba(11, 12, 233, 0.7));
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
 
 
+        // CONTACT
+        .contact{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            .email{
+                
+                .formEmail{
+                    padding: 50px;
+                    background-color: $lightColor;
+                    width: 500px;
+                    border-radius: 5px;
+                    gap: 20px;
+
+                    h1{
+                        text-align: center;
+                        color: $blackDark;
+                        font-size: 34px;
+                        font-weight: 900;
+                        opacity: 0.9;
+
+                    }
+
+                    input,textarea{
+                        background-color: $lightColor;
+                        border: none;
+                        border-bottom: 1px solid $lightGray;
+                        
+                    }
+                }
+
+                .socials{
+                    .contact-section-header{
+                        
+                    }
+                }
+            }
         }
 
     }
