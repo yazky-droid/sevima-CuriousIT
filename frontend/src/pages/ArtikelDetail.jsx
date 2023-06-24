@@ -1,18 +1,24 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Menu from '../components/Menu'
+import YoutubeEmbed from "../components/YoutubeEmbed";
+
 
 
 const ArtikelDetail = () => {
   return (
+    <>
     <div className="detailArtikel">
       <div className="content">
         <img src="https://d12man5gwydfvl.cloudfront.net/wp-content/uploads/2017/06/Kamu-Penggemar-Apel-Ini-Dia-Cara-Aman-Membeli-Buah-Apel-Segar.jpg" alt="" />
+        <div className="info-user">
+
         <div className="user">
           <img src="https://i0.wp.com/kamusnetizen.com/wp-content/uploads/2022/04/channels4_profile-1.jpg?w=900&ssl=1" alt="" />
         <div className="info">
           <span>John</span>
           <p>Posted 2 days ago</p>
+        </div>
         </div>
         <div className="edit">
           <Link className='link' to={`/write?edit=2`}>
@@ -35,11 +41,15 @@ const ArtikelDetail = () => {
 
 
         </p>
+        <h1>Video Penjelasan / Tutorial</h1>
+        <YoutubeEmbed embedId="A_DgyBBP7D0" />
       </div>
-      <div className="menu">
+
+      <h1>Other post you may like</h1>
         <Menu/>
-      </div>
+
     </div>
+    </>
   )
 }
 
