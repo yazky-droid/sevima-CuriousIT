@@ -25,7 +25,16 @@ export const register = (req, res) => {
 }
 
 export const login = (req, res) => {
-    
+  //CHECK USER
+
+  const q = "SELECT * FROM users WHERE username = ? and password = ?";
+  db.query(q, [req.body.username, req.body.password], (err, data) => {
+    if (err) return res.status(500).json(err);
+    if (data.length === 0) return res.status(404).json("User not found!");
+     
+    return res.json(data[0]);
+})
+
 }
 
 export const logout = (req, res) => {

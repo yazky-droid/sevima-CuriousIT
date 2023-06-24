@@ -6,13 +6,13 @@ import OpenAI from '../components/OpenAI';
 
 
 const Home = () => {
-  const [isGuest, setIsGuest] = useState(false)
+  const isLoggedIn = localStorage.getItem('loggedIn');
 
 
   return (
     <div className="home">
-      {!isGuest && <OpenAI />}
-      {isGuest && <LandingPage/> }
+      {isLoggedIn && <OpenAI />}
+      {!isLoggedIn && <LandingPage/> }
     </div>
   )
 }
