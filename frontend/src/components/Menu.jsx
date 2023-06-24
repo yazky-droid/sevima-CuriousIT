@@ -1,7 +1,6 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 
-const Artikel = () => {
+const Menu = () => {
 
     const posts = [
         {
@@ -31,24 +30,19 @@ const Artikel = () => {
     
       ];
 
-    return (
-    <div className="spill">
-        <div className="articles">
-        {posts.map((post)=> (
-            <div className="article" key={post.id}>
-                <div className="img">
-                    <img src={post.img} alt="" />
-                </div>
-                <div className="content">
-                    <Link className='link' to={`/article/${post.id}`}><h1>{post.title}</h1></Link>
-                    <p>{post.desc}</p>
-                    <button>Read More</button>
-                </div>
+  return (
+    <div className="menu">
+        <h1>Other post you may like</h1>
+
+        {posts.map((post)=>(
+            <div className="post" key={post.id}>
+                <img src={post.img} alt="" />
+                <h2>{post.title}</h2>
+                <button>Read More</button>
             </div>
         ))}
-        </div>
     </div>
   )
 }
 
-export default Artikel
+export default Menu
