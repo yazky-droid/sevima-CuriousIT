@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-
+import emailjs from '@emailjs/browser'
 const Contact = () => {
   const ref = useRef();
   const[success, setSuccess] = useState(null);
@@ -32,14 +32,12 @@ const Contact = () => {
         </form>
       </div>
       <div className="socials">
-          <h1 className="contact-section-header">Let's work together...</h1>
-          <p className="italic">You can get in touch with me</p>
+          <h1 className="contact-section-header"><i>Let's grow together...</i></h1>
+          <p className="italic">Mari berkoneksi di sosial media:</p>
           <ul>
-            <li><a href=""><i className="fab fa-facebook"></i> Facebook</a></li>
-            <li><a href="" id="profile-link" target="_blank"><i className="fab fa-github"></i> GitHub</a></li>
-            <li><a href=""><i className="fab fa-twitter"></i> Twitter</a></li>
-            <li><a href=""><i className="fa fa-at"></i> Send a mail</a></li>
-            <li><a href=""><i className="fa fa-mobile-alt"></i> Call me</a></li>
+            <li><a className='link' href=""> Facebook</a></li>
+            <li><a className='link' href="" id="profile-link" target="_blank"> GitHub</a></li>
+            <li><a className='link' href=""> Twitter</a></li>
           </ul>
       </div>
     </div>
