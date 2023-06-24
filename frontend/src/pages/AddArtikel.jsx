@@ -15,7 +15,15 @@ console.log(value)
       <div className="content">
         <input type="text" placeholder='Judul' onChange={(e)=>setTitle(e.target.value)} />
         <div className="editorContainer">
-          <ReactQuill className='editor' theme='snow' value={value} onChange={(e) => setValue(e.target.value)}/>
+          <ReactQuill className='text-editor' theme="snow" value={value} onChange={(e) => setValue(e.target.value)}/>
+        </div>
+        <input type="text" placeholder='Url / Link video YT' onChange={(e)=>setTitle(e.target.value)} />
+        <input type="file" id='file' />
+        <label htmlFor="file">Upload Gambar</label>
+
+        <div className="buttons">
+          <button>Simpan sebagai draf</button>
+          <button>Update</button>
         </div>
       </div>
     </div>
