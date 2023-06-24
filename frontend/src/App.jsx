@@ -55,6 +55,10 @@ const router = createBrowserRouter([
         path:"/article/:id",
         element: <ArtikelDetail />
       },
+      {
+        path:"/post",
+        element: <AddArtikel />
+      },
     ]
   },
   {

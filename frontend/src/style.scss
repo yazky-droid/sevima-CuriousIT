@@ -178,7 +178,7 @@ $pastelGray : #739AC0;
 
         }
 
-        //HOME
+        //SPILL ARTICLES
 
         .spill {
 
@@ -257,7 +257,7 @@ $pastelGray : #739AC0;
             }
         }
 
-        //DETAIL SINGLE POST
+        //DETAIL SINGLE ARTICLE
         .detailArtikel{
             display: flex;
             gap: 50px;
@@ -361,5 +361,10 @@ $pastelGray : #739AC0;
 
             }
         }
+
+        .addPost{
+            
+        }
+
     }
 }
