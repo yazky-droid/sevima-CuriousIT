@@ -1,9 +1,9 @@
 import {db} from '../db.js'
 
 export const getPosts = (req, res) => {
-    const q = "SELECT * FROM posts";
+    const q = "SELECT * FROM articles";
   
-    db.query(q, [req.query.cat], (err, data) => {
+    db.query(q, (err, data) => {
       if (err) return res.status(500).send(err);
   
       return res.status(200).json(data);
@@ -12,7 +12,7 @@ export const getPosts = (req, res) => {
 
   export const getPost = (req, res) => {
     const q =
-      "SELECT p.id, `username`, `title`, `desc`, p.img, u.img AS userImg, `cat`,`date` FROM users u JOIN posts p ON u.id = p.uid WHERE p.id = ? ";
+      "SELECT a.id, `username`, `title`, `content`, a.img, u.img AS userImg, `url_yt` FROM users u JOIN articles a ON u.id = a.user_id WHERE a.id = ? ";
   
     db.query(q, [req.params.id], (err, data) => {
       if (err) return res.status(500).json(err);
@@ -23,43 +23,43 @@ export const getPosts = (req, res) => {
 
   export const addPost = (req, res) => {
   
-      const q ="INSERT INTO posts(`title`, `content`, `img`, `url_yt`,`user_id`) VALUES (?)";
+      const q ="INSERT INTO articles(`title`, `content`, `img`, `url_yt`,`user_id`) VALUES (?)";
   
       const values = [
         req.body.title,
-        req.body.desc,
+        req.body.content,
         req.body.img,
         req.body.url,
-        req.body.user_id
+        4
       ];
   
       db.query(q, [values], (err, data) => {
         if (err) return res.status(500).json(err);
-        return res.json("Post has been created.");
+        return res.json("Article has been created.");
       });
   };
 
   export const deletePost = (req, res) => {
 
       const postId = req.params.id;
-      const q = "DELETE FROM posts WHERE `id` = ?";
+      const q = "DELETE FROM articles WHERE `id` = ?";
   
-      db.query(q, [postId, userInfo.id], (err, data) => {
+      db.query(q, [postId], (err, data) => {
         if (err) return res.status(403).json("You can delete only your post!");
   
-        return res.json("Post has been deleted!");
+        return res.json("Article has been deleted!");
       });
   };
 
   export const updatePost = (req, res) => {  
       const postId = req.params.id;
       const q =
-        "UPDATE posts SET `title`=?,`content`=?,`img`=?,`url_yt`=? WHERE `id` = ?";
+        "UPDATE articles SET `title`=?,`content`=?,`img`=?,`url_yt`=? WHERE `id` = ?";
   
-      const values = [req.body.title, req.body.desc, req.body.img, req.body.url_yt];
+      const values = [req.body.title, req.body.content, req.body.img, req.body.url_yt];
   
       db.query(q, [...values, postId], (err, data) => {
         if (err) return res.status(500).json(err);
-        return res.json("Post has been updated.");
+        return res.json("Article has been updated.");
       });
   };
