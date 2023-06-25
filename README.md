@@ -12,7 +12,7 @@ Website ini menyajikan informasi yang bertemakan tentang pendidikan dengan meman
 # ALUR
 USER LOGIN REGISTER (AGAR LEBIH DIPERSONALISASIKAN)
 data user: nama, email, pass, 
-ADA 1 AI yang bisa dipakai di homepage AI CHATGPT MANTAP
+ADA 1 AI yang bisa dipakai di homepage AI CHATGPT ala ala
 Pada HomePAGE menampilkan AI tadi tapi dengan rekomendasi juga beberapa
 ADA halaman yang menampilkan rekomendasi dan informasi belajar teknologi dan AI secara full keseluruhan (Berbentuk Artikel, Video embed yt, dan Link Source)
 Admin CRUD
