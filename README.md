@@ -25,6 +25,9 @@ Aplikasi ini bertujuan untuk membantu orang orang yang ingin tahu tentang AI dan
 ## Dokumentasi API
 https://documenter.getpostman.com/view/18351570/2s93z6e4Rd
 
+## Dokumentasi Screenshot aplikasi
+https://drive.google.com/drive/folders/1VAcY897YAwV9DCT7TliKxD55s3KpSCSh?usp=sharing
+
 ## akun yang digunakan untuk demo
 gunakan akun admin karena admin memiliki hak akses ke semuanya.
 
