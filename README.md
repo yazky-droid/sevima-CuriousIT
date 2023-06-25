@@ -20,3 +20,6 @@ Admin bisa mengatur tentang rekomendasi itu.
 
 TUJUAN
 Aplikasi ini bertujuan untuk membantu orang orang yang ingin tahu tentang AI dan perkembangan teknologi lainnya. Karena terbatasnya sumber belajar dan kebanyakan website itu berbahasa asing maka hadirlah CuriousIT untuk memberikan kemudahan akses belajar tentang berbagai topik IT tanpa harus mencari-cari sendiri.
+
+# Dokumentasi API
+https://documenter.getpostman.com/view/18351570/2s93z6e4Rd
